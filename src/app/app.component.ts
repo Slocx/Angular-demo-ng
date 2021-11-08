@@ -32,5 +32,6 @@ export class AppComponent {
   addHero = () => {
     this.newHero.hp = this.newHero.hpMax;
     this.heroes.push(this.newHero);
+    this.newHero = { nom: "", prenom: "", hp:0, hpMax:0 };
   }
 }
