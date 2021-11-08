@@ -1,0 +1,8 @@
+<div>
+    {{ hero.prenom }}
+    <progress min="0" [max]="hero.hpMax" [value]="hero.hp" ></progress>{{ hero.hp + "/" + hero.hpMax }}
+    <!-- (event) event binding, équivalent du onEvent de JS -->
+    <button (click)="taper(5)">Taper</button>
+    <button (click)="taper(10)">Taper fort</button>
+    <button (click)="taper(50)">Taper trés fort</button>
+</div>
