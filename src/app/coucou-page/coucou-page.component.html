@@ -1,0 +1,8 @@
+<app-coucou></app-coucou>
+<!-- [variable] Property binding -->
+<app-coucou [target]="'Poulet'"></app-coucou>
+<app-coucou target="Michel"></app-coucou>
+
+<h2>Affichage dynamique avec la directive *ngFor</h2>
+<!-- directive *ngFor: extrait les éléments d'un itérable et créé un composant pour chacun d'entre eux -->
+<app-coucou [target]="user.prenom" *ngFor="let user of users"></app-coucou>

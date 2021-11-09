@@ -1,32 +1,4 @@
+<app-navbar></app-navbar>
 <h1>Découverte Angular</h1>
-<app-coucou></app-coucou>
-<!-- [variable] Property binding -->
-<app-coucou [target]="cible" (click)="changerCible()"></app-coucou>
-<app-coucou [target]="'Poulet'"></app-coucou>
-<app-coucou target="Michel"></app-coucou>
-
-<h2>Affichage dynamique avec la directive *ngFor</h2>
-<!-- directive *ngFor: extrait les éléments d'un itérable et créé un composant pour chacun d'entre eux -->
-<app-coucou [target]="user.prenom" *ngFor="let user of users"></app-coucou>
-
-<!-- Formulaire simple pour ajouter un héro -->
-<div>
-    <label for="heroNom">Nom</label>
-    <input type="text" id="heroNom" [(ngModel)]="newHero.nom">
-</div>
-<div>
-    <label for="heroPrenom">Prénom</label>
-    <input type="text" id="heroPrenom" [(ngModel)]="newHero.prenom">
-</div>
-<div>
-    <label for="heroHp">Hp max</label>
-    <input type="number" step="1" min="0" id="heroHp" [(ngModel)]="newHero.hpMax">
-</div>
-
-<button (click)="addHero()">Ajouter Héro</button>
-
-{{ newHero | json }}
-
-<app-status [hero]="hero" *ngFor="let hero of heroes"></app-status>
 
 <router-outlet></router-outlet>
