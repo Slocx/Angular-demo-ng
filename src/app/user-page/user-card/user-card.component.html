@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header">
+        {{ user.name }}
+    </div>
+    <div class="card-content">
+        <ul>
+            <li>tel: <a href='{{ "tel:+" + user.phone }}'>{{ user.phone }}</a></li>
+            <li>email: <a href='{{"mailto:" + user.email}}'>{{ user.email }}</a></li>
+            <li>website: <a href='{{"https://"+ user.website}}'>{{ user.website }}</a></li>
+        </ul>
+    </div>
+</div>
