@@ -5,7 +5,7 @@ import { ArticlePageComponent } from './articles/article-page/article-page.compo
 import { CoucouPageComponent } from './coucou-page/coucou-page.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { StatusPageComponent } from './status-page/status-page.component';
-import { UserPageComponent } from './user-page/user-page.component';
+import { UserPageComponent } from './users/user-page/user-page.component';
 
 // tableau qui contient les routes
 // (peut être mis dans un fichier à part et importé ici)

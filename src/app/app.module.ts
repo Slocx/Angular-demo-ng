@@ -10,12 +10,13 @@ import { StatusComponent } from './status-page/status/status.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { StatusPageComponent } from './status-page/status-page.component';
 import { CoucouPageComponent } from './coucou-page/coucou-page.component';
-import { UserPageComponent } from './user-page/user-page.component';
+import { UserPageComponent } from './users/user-page/user-page.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
-import { UserCardComponent } from './user-page/user-card/user-card.component';
+import { UserCardComponent } from './users/user-page/user-card/user-card.component';
 import { ArticlePageComponent } from './articles/article-page/article-page.component';
 import { ArticleComponent } from './articles/article-page/article/article.component';
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
+import { UserCreateComponent } from './users/user-create/user-create.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ArticleDetailComponent } from './articles/article-detail/article-detail
     UserCardComponent,
     ArticlePageComponent,
     ArticleComponent,
-    ArticleDetailComponent
+    ArticleDetailComponent,
+    UserCreateComponent
   ],
   imports: [
     BrowserModule,
