@@ -1,6 +1,8 @@
 <div class="card">
     <div class="card-header">
         {{ user.name }}
+        <button class="edit-button" (click)="editUser()">Modifier    </button>
+        <button class="delete-button" (click)="deleteUser()">&times;</button>
     </div>
     <div class="card-content">
         <ul>
