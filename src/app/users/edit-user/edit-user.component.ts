@@ -34,7 +34,9 @@ export class EditUserComponent implements OnInit {
     this.userService.getUser(this.userId)
       .subscribe((user: User) => {
         this.user = user;
+        // on fait sauter le champ ID...
         delete user.id;
+        // ...pour pouvoir assigner l'utilisateur au formulaire (ça nous évite de faire un input pour l'id)
         this.userForm.setValue({...user});
       })
   }
