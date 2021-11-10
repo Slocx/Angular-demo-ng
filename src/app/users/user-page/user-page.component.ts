@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { User } from '../../shared/models/user';
 import { UserService } from '../../shared/services/user.service';
 
@@ -25,7 +26,15 @@ export class UserPageComponent implements OnInit {
       console.log(params);
     })
     // appel du service
-    this.userService.getUsers()
+    this.refreshUsers();
+  }
+
+  /**
+   * Appelle le service pour afficher la liste des utilisateurs
+   * @returns Subscription
+   */
+  refreshUsers(): Subscription {
+    return this.userService.getUsers()
       // souscription aux changements de l'observable
       .subscribe(
         // dés qu'il y a une reponse
@@ -34,7 +43,5 @@ export class UserPageComponent implements OnInit {
           this.users = users;
         }
       );
-
   }
-
 }

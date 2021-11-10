@@ -3,5 +3,5 @@
     <button [routerLink]="['new']">Ajouter un utilisateur</button>
 </header>
 <div class="flex">
-    <app-user-card [user]="user" *ngFor="let user of users"></app-user-card>
+    <app-user-card [user]="user" *ngFor="let user of users" (deleteEmitter)="refreshUsers()"></app-user-card>
 </div>
