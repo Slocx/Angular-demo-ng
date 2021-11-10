@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
+import { ArticlePageComponent } from './articles/article-page/article-page.component';
 import { CoucouPageComponent } from './coucou-page/coucou-page.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { StatusPageComponent } from './status-page/status-page.component';
@@ -24,6 +26,12 @@ const routes: Routes = [
       { path: ":id/post", component: UserPageComponent, pathMatch: "prefix" },
       { path: ":id/profil", component: UserPageComponent, pathMatch: "prefix" },
       { path: ":id/edit", component: UserPageComponent, pathMatch: "prefix" },
+    ]
+  },
+  {
+    path: "articles", children: [
+      { path: "", component: ArticlePageComponent },
+      { path: ":id", component: ArticleDetailComponent },
     ]
   },
   // Wildcard pour afficher un composant en cas de non existance de la page

@@ -1,0 +1,8 @@
+<!-- <div class="article" [routerLink]="[article.id]"> -->
+<div class="article">
+    <div>{{ article.title }} - écrit le {{ date | date:'dd MMMM YYYY' }} à {{ date | date:'hh:mm' }}</div>
+    <div>
+        {{ article.body | slice:0:100 }}[...]
+    </div>
+    <button (click)="viewArticle()">Lire l'article</button>
+</div>
