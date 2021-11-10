@@ -19,7 +19,7 @@ export class EditUserComponent implements OnInit {
   constructor(private userService: UserService, private router: Router, private route: ActivatedRoute) {
     this.userForm = new FormGroup({
       name: new FormControl("", [Validators.required, Validators.minLength(5)]),
-      username: new FormControl("", [Validators.required, Validators.minLength(5)]),
+      username: new FormControl("", [Validators.required, Validators.minLength(4)]),
       email: new FormControl("", Validators.email),
       phone: new FormControl("", [Validators.required,
         // regexp pour valider le numéro de tel
@@ -35,20 +35,13 @@ export class EditUserComponent implements OnInit {
       .subscribe((user: User) => {
         this.user = user;
         delete user.id;
-        this.userForm.setValue({
-          username: user.username,
-          name: user.name,
-          email: user.email,
-          website: user.website,
-          phone: user.phone
-        });
+        this.userForm.setValue({...user});
       })
   }
 
   editUser(): void {
-    this.user.id = this.userId;
     if (this.userForm.valid) {
-      this.userService.updateUser(this.user.id, this.userForm.value)
+      this.userService.updateUser(this.userId, this.userForm.value)
         .subscribe((_) => {
           this.router.navigate(['../users']);
         })
