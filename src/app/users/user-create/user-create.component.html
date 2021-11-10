@@ -1,1 +1,27 @@
-<p>user-create works!</p>
+<h2>Nouvel utilisateur</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="sendForm()">
+    <div>
+        <label for="name">Nom</label>
+        <input type="text" id="name" formControlName="name">
+        <p *ngIf="!userForm.controls['name'].valid">Le nom est requis</p>
+    </div>
+    <div>
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" id="username" formControlName="username">
+    </div>
+    <div>
+        <label for="email">email</label>
+        <input type="email" id="email" formControlName="email">
+    </div>
+    <div>
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" formControlName="phone">
+    </div>
+    <div>
+        <label for="website">Site web</label>
+        <input type="text" id="website" formControlName="website">
+    </div>
+
+    <button type="submit" [disabled]="!userForm.valid">Ajouter</button>
+</form>

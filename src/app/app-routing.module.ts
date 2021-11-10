@@ -5,6 +5,7 @@ import { ArticlePageComponent } from './articles/article-page/article-page.compo
 import { CoucouPageComponent } from './coucou-page/coucou-page.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { StatusPageComponent } from './status-page/status-page.component';
+import { UserCreateComponent } from './users/user-create/user-create.component';
 import { UserPageComponent } from './users/user-page/user-page.component';
 
 // tableau qui contient les routes
@@ -22,6 +23,7 @@ const routes: Routes = [
     // toutes les routes enfants de la route users
     children: [
       { path: "", component: UserPageComponent, pathMatch: "full" },
+      { path: "new", component: UserCreateComponent, pathMatch: "full" },
       { path: ":id", component: UserPageComponent, pathMatch: "prefix" },
       { path: ":id/post", component: UserPageComponent, pathMatch: "prefix" },
       { path: ":id/profil", component: UserPageComponent, pathMatch: "prefix" },
