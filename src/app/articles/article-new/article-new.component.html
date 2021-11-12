@@ -1,0 +1,13 @@
+<h2>Rédiger un article</h2>
+
+<form (ngSubmit)="createArticle()" [formGroup]="articleForm">
+    <div>
+        <label for="title">Titre</label>
+        <input type="text" id="title" formControlName="title">
+    </div>
+    <div>
+        <label for="body">Contenu</label>
+        <textarea id="body" formControlName="body"></textarea>
+    </div>
+    <button type="submit" [disabled]="!articleForm.valid">Ajouter l'article</button>
+</form>

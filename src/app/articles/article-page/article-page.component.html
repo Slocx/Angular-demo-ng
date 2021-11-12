@@ -1,4 +1,5 @@
 <h2>Liste des articles</h2>
+<button (click)="newArticle()">Nouvel Article</button>
 
 <div class="container">
     <app-article [article]="article" *ngFor="let article of articles"></app-article>

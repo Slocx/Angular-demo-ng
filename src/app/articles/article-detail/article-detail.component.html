@@ -1,7 +1,8 @@
 <div *ngIf="article">
     <div>{{ article.title }}</div>
     <div>{{ article.body }}</div>
-    <div>
+    <div class="comments">
         <!-- Commentaires -->
+        <app-comments [comment]="comment" *ngFor="let comment of comments"></app-comments>
     </div>
 </div>

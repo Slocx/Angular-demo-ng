@@ -18,6 +18,8 @@ import { ArticleComponent } from './articles/article-page/article/article.compon
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
 import { UserCreateComponent } from './users/user-create/user-create.component';
 import { EditUserComponent } from './users/edit-user/edit-user.component';
+import { ArticleNewComponent } from './articles/article-new/article-new.component';
+import { CommentsComponent } from './articles/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
     ArticleComponent,
     ArticleDetailComponent,
     UserCreateComponent,
-    EditUserComponent
+    EditUserComponent,
+    ArticleNewComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

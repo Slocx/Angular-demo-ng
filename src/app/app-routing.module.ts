@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
+import { ArticleNewComponent } from './articles/article-new/article-new.component';
 import { ArticlePageComponent } from './articles/article-page/article-page.component';
 import { CoucouPageComponent } from './coucou-page/coucou-page.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
   {
     path: "articles", children: [
       { path: "", component: ArticlePageComponent },
+      { path: "new", component: ArticleNewComponent },
       { path: ":id", component: ArticleDetailComponent },
     ]
   },
